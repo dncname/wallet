@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="34dp"
+        android:padding="5dp"
+        android:src="@drawable/icon_close_black"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/error_image"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/text_gray_5A5A5A"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_below="@+id/error_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_btn_retry"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="@string/click_to_refresh"
+        android:textColor="@color/day_white"
+        android:textSize="16dp" />
+</RelativeLayout>

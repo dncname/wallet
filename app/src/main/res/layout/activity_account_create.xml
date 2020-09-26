@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:background="#F8F8F8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_toolbar_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_return" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="9dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:text="创建DNC账户"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_below="@+id/appbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_pri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/line_input_margin_left"
+                    android:paddingTop="@dimen/line_input_margin_top"
+                    android:paddingEnd="@dimen/line_input_margin_right"
+                    android:paddingBottom="@dimen/line_input_margin_bottom">
+
+                    <TextView
+                        android:id="@+id/tv_pri_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="账户私钥"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tv_pri_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/line_input_margin_center"
+                        android:gravity="center_vertical"
+                        android:textIsSelectable="true"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textSize="12dp"
+                        tools:text="5Ka7RRK6Xsc5p4T5CVmcTcVZ8T5CVmcTcVZ8pgwCJ1is2ZwC3RSQFHJzaKAc1J"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/line_input_margin_left"
+                    android:paddingEnd="@dimen/line_input_margin_right"
+                    android:paddingTop="@dimen/line_input_margin_top"
+                    android:paddingBottom="@dimen/line_input_margin_bottom"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pub_title"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="账户公钥"
+                            android:textColor="#666666"
+                            android:textSize="18dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_pub_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/line_input_margin_center"
+                        android:gravity="center_vertical"
+                        android:textIsSelectable="true"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textSize="12dp"
+                        tools:text="5Ka7RRK6Xsc5p4T5CVmcTcVZ8T5CVmcTcVZ8pgwCJ1is2ZwC3RSQFHJzaKAc1J" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/line_input_margin_left"
+                    android:paddingEnd="@dimen/line_input_margin_right"
+                    android:paddingTop="@dimen/line_input_margin_top"
+                    android:paddingBottom="@dimen/line_input_margin_bottom"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_user_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="钱包地址"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/line_input_margin_center" >
+
+                        <EditText
+                            android:id="@+id/edit_user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:background="#ffffff"
+                            android:gravity="center_vertical"
+                            android:hint="请输入钱包地址"
+                            android:singleLine="true"
+                            android:maxLength="12"
+                            android:minEms="5"
+                            android:digits=".12345qwertyuiopasdfghjklzxcvbnm"
+                            android:inputType="textVisiblePassword"
+                            android:textCursorDrawable="@drawable/edit_cursor_color"
+                            android:textColor="#666666"
+                            android:textColorHint="#B2B2B2"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_acc_state"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:visibility="gone"
+                            android:layout_alignParentEnd="true"
+                            android:src="@mipmap/ic_acc_wrong"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_acc_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="2dp"
+                        android:hint="上方地址可编辑，格式：5~12个字符（a-z或1-5或.）"
+                        android:text=""
+                        android:textColor="#F16A61"
+                        android:textColorHint="#F16A61"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_psw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/line_input_margin_left"
+                    android:paddingEnd="@dimen/line_input_margin_right"
+                    android:paddingTop="@dimen/line_input_margin_top"
+                    android:paddingBottom="@dimen/line_input_margin_bottom"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_psw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="29dp"
+                        android:gravity="center"
+                        android:text="钱包密码"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/edit_psw"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="@dimen/line_input_margin_center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical"
+                        android:inputType="numberPassword"
+                        android:hint="请输入6位数字"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:textColor="#666666"
+                        android:textColorHint="#B2B2B2"
+                        android:textCursorDrawable="@drawable/edit_cursor_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_psw_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/line_input_margin_left"
+                    android:paddingEnd="@dimen/line_input_margin_right"
+                    android:paddingTop="@dimen/line_input_margin_top"
+                    android:paddingBottom="@dimen/line_input_margin_bottom"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_psw_valid_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="重复密码"
+                        android:textColor="#666666"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/edit_psw_valid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/line_input_margin_center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical"
+                        android:inputType="numberPassword"
+                        android:hint="请再次输入"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:textColor="#666666"
+                        android:textColorHint="#B2B2B2"
+                        android:textCursorDrawable="@drawable/edit_cursor_color"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="28dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_submit_height"
+                        android:paddingTop="@dimen/btn_submit_padding_top"
+                        android:layout_marginStart="@dimen/line_input_margin_left"
+                        android:layout_marginEnd="@dimen/line_input_margin_right"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_confirm"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:background="#F8F8F8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_toolbar_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_return" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="9dp"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:text="创建DNC账户"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar"
+            android:background="#F8F8F8"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <TextView
+                android:id="@+id/txt_wait_username_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintVertical_bias="0.15"
+                android:layout_marginTop="0dp"
+                android:text="希望创建的账户包括以下字符："
+                android:textColor="#666666"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt_wait_username_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/txt_wait_username_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintVertical_bias="0.32"
+                android:layout_marginTop="1dp"
+                android:text=""
+                tools:text="DNC.Park"
+                android:textColor="#666666"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/txt_wait_pub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/line_input_margin_left"
+                android:paddingEnd="@dimen/line_input_margin_right"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintVertical_bias="0.62"
+                android:text="公钥："
+                android:textColor="#666666"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt_wait_pub_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/line_input_margin_left"
+                android:paddingEnd="@dimen/line_input_margin_right"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintVertical_bias="0.8"
+                android:text="--"
+                android:textColor="#666666"
+                android:textSize="15dp"
+                tools:text="DNC582c8Lb1TQhzGo3uFkVGM2Q5VZ3ipwEzmnEQWfPFsMndW8zuVD"
+                />
+
+            <ImageView
+                android:id="@+id/iv_wait_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@drawable/shape_qrcode_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.71"
+                app:layout_constraintHorizontal_bias="0.0"
+                />
+
+            <ImageView
+                android:id="@+id/iv_wait_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_logo_bg"
+                android:src="@mipmap/icon_logo_wait"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintBottom_toTopOf="@+id/iv_wait_qr_code"
+                />
+
+            <ImageView
+                android:id="@+id/iv_wait_qr_code"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintVertical_bias="0.35"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/txt_wait_code_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_wait_qr_code"
+                android:text="二维码包含以上钱包地址和公钥消息"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_wait_pay"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                app:layout_constraintTop_toTopOf="@+id/iv_wait_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.85"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_wait_ok"
+                android:background="@drawable/shape_button_request"
+                app:layout_constraintHorizontal_bias="0.098"
+                app:layout_constraintWidth_percent="0.42"
+                android:text="请好友创建"
+                android:textColor="#FFFFFF"
+                />
+
+            <Button
+                android:id="@+id/btn_wait_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_height"
+                app:layout_constraintBottom_toBottomOf="@id/btn_wait_pay"
+                app:layout_constraintLeft_toRightOf="@id/btn_wait_pay"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/shape_button_complete"
+                app:layout_constraintHorizontal_bias="0.902"
+                app:layout_constraintWidth_percent="0.42"
+                android:text="我已支付"
+                android:textColor="#FFFFFF"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>
+

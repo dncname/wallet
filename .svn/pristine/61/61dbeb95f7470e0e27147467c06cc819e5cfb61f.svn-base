@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+<!--    <root-path name="root" path="" /> //代表设备的根目录new File("/");-->
+
+<!-- 目录不存在，好像不能用-->
+    <external-path path="." name="external_files"/>
+    <!--    <external-path name="name" path="Pictures/com.dnc.loc"/>-->
+
+</paths>

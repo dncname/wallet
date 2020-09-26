@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.zlw.base.ui.utils.BindingUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.zlw.base.ui.vm.BaseViewModel" />
+    </data>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/root"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<include-->
+    <!--android:id="@+id/errorView"-->
+    <!--layout="@layout/error_view"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<include-->
+    <!--android:id="@+id/loadingView"-->
+    <!--layout="@layout/loading_view" />-->
+
+    <!--<include-->
+    <!--android:id="@+id/emptyView"-->
+    <!--layout="@layout/empty_view"-->
+    <!--android:visibility="gone" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/day_white"
+        android:orientation="vertical">
+
+        <ViewStub
+            android:id="@+id/layout_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/contentView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:visibility="gone">-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlDragRate="0.7"
+                app:srlEnableAutoLoadMore="true"
+                app:srlHeaderHeight="65dp"
+                app:srlHeaderMaxDragRate="1.3"
+                app:srlHeaderTriggerRate="0.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_srlBackgroundColor="@android:color/transparent"
+                    app:layout_srlSpinnerStyle="Scale">
+
+                    <!--<pl.droidsonroids.gif.GifImageView-->
+                        <!--android:id="@+id/gifView"-->
+                        <!--android:layout_width="45dp"-->
+                        <!--android:layout_height="45dp"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@drawable/gif_header_repast" />-->
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/gifView"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/text_blue"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <!--app:layout_srlSpinnerStyle="Scale"
+                    app:layout_srlBackgroundColor="@android:color/transparent"-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/loading_tip"
+                        android:textColor="@color/text_gray_5A5A5A"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <!--自动滚动解决1:android:focusableInTouchMode="true"
+                android:focusable="true"-->
+
+                <!--自动滚动解决2:android:descendantFocusability="blocksDescendants"
+                android:overScrollMode="never"-->
+
+                <ezy.ui.layout.LoadingLayout
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list"
+                        android:name="tac.android.base.fm.BaseListFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:overScrollMode="never"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" />
+                </ezy.ui.layout.LoadingLayout>
+                <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+                <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:srlAccentColor="#888"
+                    app:srlClassicsSpinnerStyle="Translate"
+                    app:srlDrawableProgress="@drawable/ic_progress_puzzle" />
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <ViewStub
+                android:id="@+id/layout_appbar_inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout><!--</RelativeLayout>-->
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="dialog_card">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 遮罩层 -->
+<!--        <item name="android:backgroundDimAmount">0.5</item>-->
+    </style>
+
+    <style name="dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="LoadingLayoutStyle" parent="LoadingLayout.Style">
+        <item name="llEmptyResId">@layout/layout_empty</item>
+        <item name="llLoadingResId">@layout/common_loading</item>
+        <item name="llErrorResId">@layout/layout_error</item>
+        <item name="llEmptyImage">@drawable/icon_empty_bg</item>
+        <item name="llErrorImage">@drawable/icon_empty_bg</item>
+        <item name="llButtonBackground">@drawable/selector_btn_retry</item>
+        <item name="llButtonTextColor">@color/text_black_222222</item>
+        <item name="llButtonTextSize">16dp</item>
+        <item name="llTextSize">13dp</item>
+        <item name="llTextColor">@color/text_gray_5A5A5A</item>
+        <item name="llRetryText">@string/click_to_refresh</item>
+        <!--<item name="llLoadingResId">@layout/common_loading</item>-->
+        <!--<item name="llRetryText">@string/app_name</item>-->
+    </style>
+
+</resources>
